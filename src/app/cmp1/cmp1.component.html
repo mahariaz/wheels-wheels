@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="main-nav">
+        <ul>
+          <li>
+            <div class="dropdown">
+              <button class="type">Type</button>
+              <div class="dropdown-content">
+                <a href="#">Cars</a>
+                <a href="#">Bikes</a>
+              </div>
+            </div>
+        </li>
+            <li><a href="">Make</a></li>
+            <li><a href="">Model</a></li>
+            <li><a href="">Mileage</a></li>
+            <li><a href="">Price</a></li>
+            <li><a href="">Year</a></li>
+            <li><a href="">Videos</a></li>
+            <li><a href="">Color</a></li>
+            <li><a href="">Engine</a></li>
+            <li><a href="">Rating</a></li>
+            
+        </ul>
+    </nav>
+        <div class="row" >
+    <div class="card" style="width: 18rem;" *ngFor="let vehicle of vehicles" >
+        <div class="try"  [class.selected]="vehicle === selectedVehicle" type="button" (click)="onSelect(vehicle)">
+        <img src="{{vehicle.img}}" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">{{vehicle.name}}</h5>
+          <p id="price">{{vehicle.price}}</p> 
+          <p id="loc">{{vehicle.loc}}</p> 
+          <p id="date">{{vehicle.date}}</p> 
+
+
+        </div>
+    </div>
+      </div>
+    </div>
+       
+     
+    <div *ngIf="selectedVehicle">
+    
+      <h2>{{selectedVehicle.name | uppercase}} Details</h2>
+      <div><img src="{{selectedVehicle.img}}" height="100px" width="100px"> </div>
+      <div>type: {{selectedVehicle.type}}</div>
+      <div>make: {{selectedVehicle.make}}</div>
+      <div>id: {{selectedVehicle.id}}</div>
+      <div>id: {{selectedVehicle.id}}</div>
+      <div>id: {{selectedVehicle.id}}</div>
+    
+    
+    </div>
+    <!-- <router-outlet></router-outlet> -->
+    
+    
+    
+    
+    
+    
+      
+</body>
+</html>
+
+
+ 
