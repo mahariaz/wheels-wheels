@@ -32,40 +32,27 @@
             
         </ul>
     </nav>
-        <div class="row" >
-    <div class="card" style="width: 18rem;" *ngFor="let vehicle of vehicles" >
-        <div class="try"  [class.selected]="vehicle === selectedVehicle" type="button" (click)="onSelect(vehicle)">
-        <img src="{{vehicle.img}}" class="card-img-top" alt="">
-        <div class="card-body">
-          <h5 class="card-title">{{vehicle.name}}</h5>
-          <p id="price">{{vehicle.price}}</p> 
-          <p id="loc">{{vehicle.loc}}</p> 
-          <p id="date">{{vehicle.date}}</p> 
-
-
-        </div>
-    </div>
+    <div class="row" >
+      <div class="card" style="width: 18rem;" *ngFor="let vehicle of vehicles" >
+          <div class="try"  [class.selected]="vehicle === selectedVehicle" type="button" (click)="onSelect(vehicle)">
+            <img src="{{vehicle.img}}" class="card-img-top" alt="">
+            <div class="card-body">
+              <h5 class="card-title">{{vehicle.name}}</h5>
+              <p id="price">{{vehicle.price}}</p> 
+              <p id="loc">{{vehicle.loc}}</p> 
+              <p id="date">{{vehicle.date}}</p> 
+            </div>
+          </div>
       </div>
     </div>
        
      
-    <div *ngIf="selectedVehicle">
+
+   
     
-      <h2>{{selectedVehicle.name | uppercase}} Details</h2>
-      <div><img src="{{selectedVehicle.img}}" height="100px" width="100px"> </div>
-      <div>type: {{selectedVehicle.type}}</div>
-      <div>make: {{selectedVehicle.make}}</div>
-      <div>id: {{selectedVehicle.id}}</div>
-      <div>id: {{selectedVehicle.id}}</div>
-      <div>id: {{selectedVehicle.id}}</div>
+    <!-- <app-vehicle-details [vehicle]="selectedVehicle"></app-vehicle-details> -->
     
-    
-    </div>
     <!-- <router-outlet></router-outlet> -->
-    
-    
-    
-    
     
     
       
