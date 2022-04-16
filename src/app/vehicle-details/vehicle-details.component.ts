@@ -1,5 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { Vehicle } from 'src/app/cmp1/vehicle';
+import { Vehicle } from 'src/app/vehicle-list/vehicle';
 import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-vehicle-details',
@@ -7,15 +7,14 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./vehicle-details.component.css']
 })
 export class VehicleDetailsComponent implements OnInit {
-  // @Input() vehicle?: Vehicle;
+  @Input() vehicle?: Vehicle;
   public vehicleId:any;
+
   constructor(private route:ActivatedRoute) { }
 
   ngOnInit() {
-   
-    //let id=parseInt(this.route.snapshot.paramMap.get('id') as string);
-    this.vehicleId = JSON.parse(this.route.snapshot.paramMap.get('id') as string);
-    //this.vehicleId=id;
+    let id=parseInt(this.route.snapshot.paramMap.get('id') as string);
+    this.vehicleId=id;
   
 
   }

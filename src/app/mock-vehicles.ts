@@ -1,4 +1,4 @@
-import { Vehicle } from 'src/app/cmp1/vehicle';
+import { Vehicle } from 'src/app/vehicle-list/vehicle';
 
 export const VEHICLES: Vehicle[] = [
   { 
@@ -109,7 +109,7 @@ export const VEHICLES: Vehicle[] = [
     id: 5, 
     name: 'BMW',
     img:'assets/images/5.jpg',
-    type:'car',
+    type:'bike',
     make:'Costruzioni',
     model:'Cayman GT3',
     mileage:'20.9 kmpl',

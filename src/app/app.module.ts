@@ -3,14 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Cmp1Component } from './cmp1/cmp1.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
+import * as $ from 'jquery';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Cmp1Component,
-    VehicleDetailsComponent
+    VehicleDetailsComponent,
+    VehicleListComponent
   ],
   imports: [
     BrowserModule,

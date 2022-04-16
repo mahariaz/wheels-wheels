@@ -10,13 +10,16 @@
 </head>
 <body>
     <nav class="main-nav">
+
         <ul>
           <li>
             <div class="dropdown">
               <button class="type">Type</button>
               <div class="dropdown-content">
-                <a href="#">Cars</a>
-                <a href="#">Bikes</a>
+
+
+                    <a  href="#" (click)="showCars('car')">Car</a>
+                    <a  href="#" (click)="showCars('bike')">Bike</a>
               </div>
             </div>
         </li>
@@ -32,9 +35,11 @@
             
         </ul>
     </nav>
-    <div class="row" >
-      <div class="card" style="width: 18rem;" *ngFor="let vehicle of vehicles" >
-          <div class="try"  [class.selected]="vehicle === selectedVehicle" type="button" (click)="onSelect(vehicle)">
+
+
+    <div class="row"  *ngIf="visible">
+      <div class="card" style="width: 18rem;" *ngFor="let vehicle of carArray" >
+          <div class="try"  [class.selected]="vehicle === selectedVehicle" type="button" (click)="onSelect(vehicle)" >
             <img src="{{vehicle.img}}" class="card-img-top" alt="">
             <div class="card-body">
               <h5 class="card-title">{{vehicle.name}}</h5>
@@ -46,18 +51,16 @@
       </div>
     </div>
        
-     
+
 
    
     
-    <!-- <app-vehicle-details [vehicle]="selectedVehicle"></app-vehicle-details> -->
+    <app-vehicle-details [vehicle]="selectedVehicle"></app-vehicle-details>
     
-    <!-- <router-outlet></router-outlet> -->
+
     
     
       
 </body>
 </html>
 
-
- 
