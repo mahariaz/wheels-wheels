@@ -4,5 +4,53 @@ body{
     padding: 0px;
     margin: 0px;
     max-width: 100%;
-    background-color: #f1f1f1;
+  
+
+}
+.header{
+    background: rgb(38, 42, 43); 
+}
+.header h1{
+    text-align: center;
+    color: white;
+}
+.div-to-be{
+    margin: 10%;
+    display: grid;
+    grid-gap:5px;
+    grid-template-columns: repeat(2,1fr);
+    
+}
+.left-side{
+    background-color: white;
+
+    
+   
+}
+.right-side{
+    background-color: white;
+  
+    padding: 100px;
+    
+
+}
+.price-box{
+    border-bottom: 1px solid green;
+
+}
+.price-box h1{
+    color: green;
+    text-align: center;
+}
+.seller-box{
+    margin-top: 50px;
+    background-color: rgba(255, 240, 240, 0.708);
+
+}
+.bar-container{
+    display: grid;
+    gap:10px;
+}
+.progress{
+    color: aqua;
 }

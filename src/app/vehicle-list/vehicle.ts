@@ -5,8 +5,8 @@ export interface Vehicle {
     type:string;
     make:string;
     model:string;
-    mileage:string;
-    price:string;
+    mileage:number;
+    price:number;
     year:string;
     color:string;
     engine:string;
@@ -27,6 +27,7 @@ export interface Vehicle {
     seller_email:string;
     seller_hrs:string;
     comments:string;
+    name2:string;
 
 
 }

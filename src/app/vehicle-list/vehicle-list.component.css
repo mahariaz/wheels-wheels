@@ -34,7 +34,7 @@ body{
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: rgb(38, 42, 43);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -47,7 +47,7 @@ body{
     display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {background-color: rgb(196, 187, 187);}
 
 
 .dropdown:hover .dropdown-content {display: block;}
@@ -78,6 +78,9 @@ p{
 }
 #price{
     color: #3e8e41;
+}
+#go{
+    background-color: blue;
 }
 @media (max-width:767px){
     .main-nav{

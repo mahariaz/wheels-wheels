@@ -1,12 +1,91 @@
-<div *ngIf="vehicle">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div *ngIf="vehicle">
+        <div class="header">
+            <h1>Vehicle Details</h1>
 
-<h2>{{vehicle.name | uppercase}} Details</h2>
-    <div><img src="{{vehicle.img}}" height="100px" width="100px"> </div>
-    <div>id: {{vehicle.id}}</div>
+        </div>
+        <div class="div-to-be">
+            <div class="left-side">
+                <h1>{{vehicle.name | uppercase}} {{vehicle.name2}} {{vehicle.year}}</h1>
+                <div class="image"><img src="{{vehicle.img}}" height="500px" width="500px"> </div>
+                <table class="table">
+                    <tbody>
+                      <tr>
+                        <th scope="row">Assembly</th>
+                        <td>{{vehicle.assembly}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Engine Capacity</th>
+                        <td>{{vehicle.engine}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Registered in</th>
+                        <td>{{vehicle.loc}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Color</th>
+                        <td>{{vehicle.color}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Last Updated</th>
+                        <td>{{vehicle.date}}</td>
+                      </tr>
+
+                    </tbody>
+                  </table>
 
 
-</div>
+            </div>
+            <div class="right-side">
+                <div class="price-box">
+                    <h1>PKR {{vehicle.price}} Crore</h1>
 
+                </div>
+                <div class="seller-box">
+                    <h3>Sellers Information</h3>
+                    <h6>{{vehicle.seller_name}}</h6>
+                    <p>{{vehicle.seller_email}}</p>
+                    <p>Contact hrs {{vehicle.seller_hrs}}</p>      
+    
+                </div>
+                <div class="com-box">
+                    <h5>Comments</h5>   
+                    <p>{{vehicle.comments}}</p>  
+                </div>
 
-<!-- <div *ngIf="vehicle.type==='car'">
-</div> -->
+                <tr class="table-active">
+                    Exterior {{vehicle.exterior}}
+                </tr>
+
+                <tr class="table-primary">
+                    Interior {{vehicle.interior}}
+                </tr>
+                <tr class="table-secondary">
+                    Transmission {{vehicle.transmission}}
+                </tr>
+                <tr class="table-success">
+                    Steering {{vehicle.stearing}}
+                </tr>
+                <tr class="table-danger">
+                    Suspension {{vehicle.suspension}}
+                </tr>
+                
+
+            </div>
+        </div>
+
+        
+        
+    </div>
+        
+</body>
+</html>
+

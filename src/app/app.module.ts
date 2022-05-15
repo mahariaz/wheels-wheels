@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
-import * as $ from 'jquery';
+// import * as $ from 'jquery';
 
 @NgModule({
   declarations: [

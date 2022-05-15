@@ -7,55 +7,200 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css" rel="stylesheet" />
+    
 </head>
 <body>
-    <nav class="main-nav">
+    <nav class="main-nav" *ngIf="visible">
 
         <ul>
           <li>
             <div class="dropdown">
               <button class="type">Type</button>
               <div class="dropdown-content">
-
-
-                    <a  href="#" (click)="showCars('car')">Car</a>
-                    <a  href="#" (click)="showCars('bike')">Bike</a>
+                    <!-- <a  href="#" (click)="typeCheck('car')">Car</a>
+                    <a  href="#" (click)="typeCheck('bike')">Bike</a> -->
               </div>
             </div>
         </li>
-            <li><a href="">Make</a></li>
-            <li><a href="">Model</a></li>
-            <li><a href="">Mileage</a></li>
-            <li><a href="">Price</a></li>
-            <li><a href="">Year</a></li>
-            <li><a href="">Videos</a></li>
-            <li><a href="">Color</a></li>
-            <li><a href="">Engine</a></li>
-            <li><a href="">Rating</a></li>
+            <li>
+              <div class="dropdown">
+                <button class="type">Make</button>
+                <div class="dropdown-content">
+                      <!-- <a  href="#" (click)="makeCheck('Toyota')">Toyota</a>
+                      <a  href="#" (click)="makeCheck('Mercedes')">Mercedes</a>
+                      <a  href="#" (click)="makeCheck('Costruzioni')">Costruzioni</a>
+                      <a  href="#" (click)="makeCheck('Volkswagen')">Volkswagen</a>
+                      <a  href="#" (click)="makeCheck('Honda')">Honda</a>
+                      <a  href="#" (click)="makeCheck('Hyundai')">Hyundai</a>
+                      <a  href="#" (click)="makeCheck('Nissan')">Nissan</a>
+                      <a  href="#" (click)="makeCheck('Yamaha')">Yamaha</a>
+                      <a  href="#" (click)="makeCheck('Suzuki')">Suzuki</a> -->
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown">
+                <button class="type">Model</button>
+                <div class="dropdown-content">
+                      <!-- <a  href="#" (click)="modelCheck('Family')">Family</a>
+                      <a  href="#" (click)="makeCheck('Big')">Big</a>
+                      <a  href="#" (click)="makeCheck('High Priced')">High Priced</a> -->
+                    
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown" >
+                <button class="type" >Mileage</button>
+                <div class="dropdown-content">
+                  <!-- <select id="lowmil" (change)="lowMil()" >
+                    <option>From</option>
+                    <option>8</option>
+                    <option >12</option>
+                    <option >15</option>
+                  </select> -->
+                  
+                  <!-- <select id="highmil" (change)="highMil()">
+                      <option>To</option>
+                      <option>11</option>
+                      <option>14</option>
+                      <option>18</option>
+                  </select> -->
+                    
+                <!-- <button id="go" type="submit" value="go" (click)=mileageCheck()>Go</button> -->
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown" >
+                <button class="type" >Price</button>
+                <div class="dropdown-content">
+                  <!-- <select id="lowp" (change)="lowP()" >
+                    <option>From</option>
+                    <option>1</option>
+                    <option >5</option>
+                    <option >11</option>
+                  </select> -->
+                  
+                  <!-- <select id="highp" (change)="highP()">
+                      <option>To</option>
+                      <option>4</option>
+                      <option>10</option>
+                      <option>15</option>
+                  </select> -->
+                    
+                <!-- <button id="go" type="submit" value="go" (click)=priceCheck()>Go</button> -->
+              </div>
+            </div>
+            </li>
+            <li>
+              <div class="dropdown">
+                <button class="type">Year</button>
+                <div class="dropdown-content">
+                      <!-- <a  href="#" (click)="yearCheck('2019')">2019</a>
+                      <a  href="#" (click)="yearCheck('2020')">2020</a>
+                      <a  href="#" (click)="yearCheck('2021')">2021</a>
+                      <a  href="#" (click)="yearCheck('2022')">2022</a> -->
+
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown">
+                <button class="type">Color</button>
+                <div class="dropdown-content">
+                      <!-- <a  href="#" (click)="colorCheck('black')">Black</a>
+                      <a  href="#" (click)="colorCheck('white')">White</a>
+                      <a  href="#" (click)="colorCheck('red')">Red</a>
+                      <a  href="#" (click)="colorCheck('yellow')">Yellow</a> -->
+
+
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown">
+                <button class="type">Engine</button>
+                <div class="dropdown-content">
+                      <!-- <a  href="#" (click)="engineCheck('1300cc')">1300 cc</a>
+                      <a  href="#" (click)="engineCheck('1500cc')">1500 cc</a>
+                      <a  href="#" (click)="engineCheck('1600cc')">1600 cc</a>
+                      <a  href="#" (click)="engineCheck('1800cc')">1800 cc</a> -->
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown">
+                <button class="type">Rating</button>
+                <div class="dropdown-content">
+                      <!-- <a  href="#" (click)="rateCheck('1')">1</a>
+                      <a  href="#" (click)="rateCheck('2')">2</a>
+                      <a  href="#" (click)="rateCheck('3')">3</a>
+                      <a  href="#" (click)="rateCheck('4')">4</a>
+                      <a  href="#" (click)="rateCheck('5')">5</a> -->
+
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown">
+                <button class="type">City</button>
+                <div class="dropdown-content">
+                      <!-- <a  href="#" (click)="cityCheck('Islamabad')">Islamabad</a>
+                      <a  href="#" (click)="cityCheck('Lahore')">Lahore</a>
+                      <a  href="#" (click)="cityCheck('Karachi')">Karachi</a>
+                      <a  href="#" (click)="cityCheck('Peshawar')">Peshawar</a> -->
+
+
+                </div>
+              </div>
+            </li>
             
         </ul>
     </nav>
 
 
-    <div class="row"  *ngIf="visible">
+    <!-- <div class="row"  *ngIf="visible">
       <div class="card" style="width: 18rem;" *ngFor="let vehicle of carArray" >
           <div class="try"  [class.selected]="vehicle === selectedVehicle" type="button" (click)="onSelect(vehicle)" >
+            <p class="card-header">Featured</p>
             <img src="{{vehicle.img}}" class="card-img-top" alt="">
             <div class="card-body">
               <h5 class="card-title">{{vehicle.name}}</h5>
-              <p id="price">{{vehicle.price}}</p> 
+              <p id="price">PKR {{vehicle.price}} crore</p>
               <p id="loc">{{vehicle.loc}}</p> 
               <p id="date">{{vehicle.date}}</p> 
+              <p id="date">Rating {{vehicle.rating}}</p> 
+              
             </div>
           </div>
       </div>
-    </div>
+    </div> -->
        
 
+    <h2>Students</h2>
 
+    <p *ngIf="students.length==0; else studentsExits">No students</p>
+    
+    <ng-template #studentsExits>
+      <table [ngStyle]="{'border': '1px solid', 'background-color':'lightblue'}">
+        <tr><th>Name</th><th>Roll #</th><th>Age</th></tr>
+        <tr *ngFor="let st of students; let i = index">
+          <td>{{st.name}}</td>
+          <td>{{st.make}}</td>
+          <td>{{st.model}}</td>
+
+
+    
+    
+        </tr>
+      </table>
+    </ng-template>
+    
+    
    
     
-    <app-vehicle-details [vehicle]="selectedVehicle"></app-vehicle-details>
+    <!-- <app-vehicle-details [vehicle]="selectedVehicle"></app-vehicle-details> -->
     
 
     
